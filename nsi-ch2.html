@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>NSI – Chapitre 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero page-chapitre">
+    <h1>NSI – Chapitre 2</h1>
+    <p>Structures séquentielles</p>
+</header>
+
+<main class="contenu">
+
+    <section class="carte">
+        <h2>🧠 Idée centrale du chapitre</h2>
+        <p>Quand on manipule beaucoup de données ou des données liées entre elles, on utilise des
+        <strong>structures séquentielles</strong> : chaînes de caractères, tuples, listes et dictionnaires.</p>
+        <p>Ces structures permettent de <strong>regrouper</strong>, <strong>parcourir</strong> et <strong>traiter</strong> efficacement des données.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🔤 Chaînes de caractères (str)</h2>
+        <p>Une chaîne de caractères est une <strong>suite ordonnée de caractères</strong>.</p>
+        <p>C’est une structure séquentielle <strong>non modifiable</strong> (non mutable).</p>
+        <ul>
+            <li>Accès par indice : <code>chaine[i]</code></li>
+            <li>Longueur : <code>len(chaine)</code></li>
+            <li>Tranches (slicing) possibles</li>
+            <li>Concaténation et répétition possibles</li>
+        </ul>
+        <p>Toute tentative de modification directe provoque une <strong>erreur TypeError</strong>.</p>
+    </section>
+
+    <section class="carte">
+        <h2>📦 Tuples (séquences)</h2>
+        <p>Un tuple est une structure séquentielle définie par des éléments séparés par des virgules.</p>
+        <p>Comme les chaînes, les tuples sont <strong>non modifiables</strong>.</p>
+        <p>Ils sont utiles pour regrouper des valeurs liées entre elles (coordonnées, résultats multiples…).</p>
+        <p>Les parenthèses sont parfois implicites.</p>
+    </section>
+
+    <section class="carte">
+        <h2>📊 Listes (tableaux)</h2>
+        <p>Une liste est une structure séquentielle <strong>modifiable</strong>.</p>
+        <p>Elle peut contenir des données de tout type et permet des traitements par boucles.</p>
+        <ul>
+            <li>Accès par indice à partir de 0</li>
+            <li>Parcours avec <code>for</code> ou <code>while</code></li>
+            <li>Ajout dynamique avec <code>append</code></li>
+        </ul>
+        <p>Les indices doivent être des entiers compris entre 0 et la taille − 1.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🧩 Listes multidimensionnelles</h2>
+        <p>Une liste peut contenir d’autres listes → tableaux à plusieurs dimensions.</p>
+        <p>On y accède avec plusieurs indices : <code>tab[i][j]</code>.</p>
+        <p>Ce type de structure est utilisé pour modéliser des grilles, des plateaux de jeu, des matrices…</p>
+        <p>Le choix du nombre de dimensions dépend du problème à résoudre.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🔁 Opérations communes aux structures séquentielles</h2>
+        <ul>
+            <li>Accès par indice</li>
+            <li>Tranches (slicing)</li>
+            <li><code>len</code>, <code>min</code>, <code>max</code></li>
+            <li>Appartenance : <code>x in s</code></li>
+            <li>Concaténation et répétition</li>
+        </ul>
+        <p>Ces opérations fonctionnent sur les chaînes, les listes et les tuples.</p>
+    </section>
+
+    <section class="carte">
+        <h2>✂️ Slicing (saucissonnage)</h2>
+        <p>Le slicing permet d’extraire une partie d’une structure séquentielle :</p>
+        <p><code>liste[début : fin : pas]</code></p>
+        <ul>
+            <li>Les bornes peuvent être omises</li>
+            <li>Un pas négatif permet d’inverser l’ordre</li>
+            <li><code>liste[:]</code> permet de copier une liste</li>
+        </ul>
+        <p>C’est un outil très puissant pour manipuler les données.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🧬 Copie de listes</h2>
+        <p>Une affectation simple crée un <strong>alias</strong> (même adresse mémoire).</p>
+        <p>Modifier une liste modifie alors toutes ses références.</p>
+        <p>Pour éviter cela :</p>
+        <ul>
+            <li><code>liste[:]</code> → copie superficielle</li>
+            <li><code>deepcopy</code> → copie profonde (si listes imbriquées)</li>
+        </ul>
+    </section>
+
+    <section class="carte">
+        <h2>⚡ Compréhension de liste</h2>
+        <p>La compréhension de liste permet de créer une liste à partir d’une autre :</p>
+        <p><code>[expression for x in liste if condition]</code></p>
+        <p>C’est une écriture <strong>courte, lisible et efficace</strong>.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🗂️ Dictionnaires</h2>
+        <p>Un dictionnaire associe une <strong>clé</strong> à une <strong>valeur</strong>.</p>
+        <p>Contrairement aux listes, l’accès ne se fait pas par indice mais par clé.</p>
+        <ul>
+            <li>Clés uniques</li>
+            <li>Valeurs de tout type</li>
+            <li>Accès rapide aux données</li>
+        </ul>
+        <p>Ils sont très utilisés pour structurer des informations complexes.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🧪 Ce que montre le TP</h2>
+        <ul>
+            <li>Parcours de tableaux avec <code>for</code> et <code>while</code></li>
+            <li>Calculs sur les listes (somme, maximum, position)</li>
+            <li>Création de nouvelles listes à partir d’anciennes</li>
+            <li>Recherche simple et recherche dichotomique</li>
+            <li>Génération de tableaux aléatoires</li>
+        </ul>
+        <p>Le TP montre comment <strong>exploiter concrètement les structures séquentielles</strong>
+        avec des algorithmes classiques.</p>
+    </section>
+
+    <section class="carte">
+        <h2>✅ À retenir absolument</h2>
+        <ul>
+            <li>Les structures séquentielles stockent des ensembles de données</li>
+            <li>str et tuple → non modifiables</li>
+            <li>list → modifiable</li>
+            <li>Le slicing est un outil clé</li>
+            <li>Les dictionnaires utilisent des clés</li>
+        </ul>
+    </section>
+
+    <img src="Image/image.png" alt="Spectre d’absorption">
+
+</main>
+
+<div class="retour">
+    <a href="nsi.html">⬅ Retour aux chapitres NSI</a>
+</div>
+
+</body>
+</html>

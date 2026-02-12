@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>NSI – Chapitre 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero page-chapitre">
+    <h1>NSI – Chapitre 1</h1>
+    <p>Codage et représentation des données</p>
+</header>
+
+<main class="contenu">
+
+    <section class="carte">
+        <h2>💾 Principe fondamental</h2>
+        <p>Dans un ordinateur, toutes les données sont stockées sous forme de <strong>bits</strong> (0 et 1).</p>
+        <p>Les nombres, les textes, les images ou les sons doivent donc être <strong>codés en binaire</strong>.</p>
+        <p>La mémoire étant finie, <strong>tous les nombres ne sont pas représentables</strong>.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🔢 Écriture dans une base quelconque</h2>
+        <p>Un nombre écrit en base <strong>b</strong> est une somme de puissances de b.</p>
+        <p>Exemple en base 10 : 2985 = 2×10³ + 9×10² + 8×10 + 5</p>
+        <p>Exemple en base 2 ou 3 : même principe, mais avec d’autres puissances.</p>
+        <p>En base 2, seuls les chiffres <strong>0 et 1</strong> sont utilisés.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🔁 Conversion décimal → binaire</h2>
+        <p>Pour convertir un entier en binaire, on effectue des <strong>divisions successives par 2</strong>.</p>
+        <p>Les restes, lus de bas en haut, forment l’écriture binaire.</p>
+        <p>Le bit le plus à gauche est le <strong>bit de poids fort</strong>, celui de droite le <strong>bit de poids faible</strong>.</p>
+        <p>8 bits forment un <strong>octet</strong>.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🧠 Représentation en machine</h2>
+        <p>Avec <strong>n bits</strong>, on peut coder les entiers naturels de :</p>
+        <p><strong>0 à 2ⁿ − 1</strong></p>
+        <ul>
+            <li>8 bits → de 0 à 255</li>
+            <li>16 bits → de 0 à 65 535</li>
+            <li>32 bits → jusqu’à ≈ 4,3 milliards</li>
+        </ul>
+        <p>Un calcul peut dépasser la capacité maximale : on parle de <strong>dépassement de capacité (overflow)</strong>.</p>
+    </section>
+
+    <section class="carte">
+        <h2>➕ Addition binaire</h2>
+        <p>L’addition binaire fonctionne comme en base 10, avec des retenues.</p>
+        <p>Règle clé : 1 + 1 = 10 (0 avec retenue 1).</p>
+        <p>Les ordinateurs utilisent principalement l’addition pour effectuer tous les calculs.</p>
+    </section>
+
+    <section class="carte">
+        <h2>➖ Codage des entiers relatifs</h2>
+        <p>Un entier relatif peut être codé de plusieurs façons :</p>
+        <ul>
+            <li><strong>Bit de signe</strong> : 1 bit indique le signe</li>
+            <li><strong>Complément à 2</strong> : méthode standard en machine</li>
+            <li><strong>Excédent</strong> : décalage d’une valeur fixe</li>
+        </ul>
+        <p>Le complément à 2 permet de simplifier les opérations arithmétiques.</p>
+    </section>
+
+    <section class="carte">
+        <h2>📐 Codage des nombres réels</h2>
+        <p>Un nombre réel ne peut pas toujours être représenté exactement.</p>
+        <p>On utilise une <strong>approximation binaire</strong>.</p>
+        <p>Les réels sont codés en <strong>virgule flottante</strong>, sur le modèle scientifique :</p>
+        <p><strong>x = signe × mantisse × 2<sup>exposant</sup></strong></p>
+    </section>
+
+    <section class="carte">
+        <h2>📏 Norme IEEE 754</h2>
+        <p>En Python (type <code>float</code>), les réels suivent la norme IEEE 754.</p>
+        <ul>
+            <li>1 bit de signe</li>
+            <li>11 bits d’exposant</li>
+            <li>52 bits de mantisse</li>
+        </ul>
+        <p>Certains nombres comme 0.1 ne sont pas codables exactement → <strong>erreurs d’arrondi</strong>.</p>
+    </section>
+
+    <section class="carte">
+        <h2>⚠️ Erreurs numériques en Python</h2>
+        <p>Des calculs simples peuvent donner des résultats inattendus :</p>
+        <p><strong>(0.2 + 0.1) − 0.3 ≠ 0</strong></p>
+        <p>Ce phénomène est dû aux limites du codage binaire des réels.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🔤 Codage des caractères</h2>
+        <p>Un texte est une suite de caractères, chacun codé par un nombre.</p>
+        <ul>
+            <li><strong>ASCII</strong> : 128 caractères</li>
+            <li><strong>UTF-8</strong> : permet tous les alphabets</li>
+        </ul>
+        <p>UTF-8 est compatible avec ASCII et utilise parfois plusieurs octets.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🧪 Ce que montre le TP</h2>
+        <ul>
+            <li>Conversion binaire ↔ décimal</li>
+            <li>Division euclidienne programmée</li>
+            <li>Tests logiques et comparaisons</li>
+            <li>Codage des entiers relatifs</li>
+            <li>Implémentation du complément à 2</li>
+        </ul>
+        <p>Le TP montre que <strong>le codage est une construction algorithmique</strong>, pas magique.</p>
+    </section>
+
+    <section class="carte">
+        <h2>✅ À retenir absolument</h2>
+        <ul>
+            <li>Tout est codé en binaire</li>
+            <li>La mémoire est finie</li>
+            <li>Les réels sont approximés</li>
+            <li>Le complément à 2 est la norme</li>
+            <li>Les erreurs numériques sont normales</li>
+        </ul>
+    </section>
+
+</main>
+
+<div class="retour">
+    <a href="nsi.html">⬅ Retour aux chapitres NSI</a>
+</div>
+
+</body>
+</html>

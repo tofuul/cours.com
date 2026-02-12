@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>NSI – Chapitre 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero page-chapitre">
+    <h1>NSI – Chapitre 3</h1>
+    <p>Architecture des ordinateurs</p>
+</header>
+
+<main class="contenu">
+
+    <section class="carte">
+        <h2>🧠 Idée centrale du chapitre</h2>
+        <p>Un ordinateur est une machine qui <strong>traite de l’information</strong> en exécutant des
+        <strong>instructions</strong> sur des <strong>données</strong>, uniquement à partir de deux états :
+        <strong>0 et 1</strong>.</p>
+        <p>Tout le fonctionnement repose sur des <strong>composants électroniques</strong> organisés de manière logique.</p>
+    </section>
+
+    <section class="carte">
+        <h2>⚡ Pourquoi le binaire ?</h2>
+        <p>À la base d’un ordinateur se trouve le <strong>transistor</strong>.</p>
+        <p>Il se comporte comme un interrupteur :</p>
+        <ul>
+            <li>courant qui passe → état haut → <strong>1</strong></li>
+            <li>courant qui ne passe pas → état bas → <strong>0</strong></li>
+        </ul>
+        <p>Un ordinateur fonctionne donc uniquement en <strong>base 2</strong> (binaire).</p>
+    </section>
+
+    <section class="carte">
+        <h2>🧮 Algèbre de Boole et logique</h2>
+        <p>Les traitements réalisés par l’ordinateur reposent sur des <strong>opérations logiques</strong>
+        issues de l’algèbre de Boole.</p>
+        <p>Un circuit logique reçoit des entrées (0 ou 1) et produit une sortie (0 ou 1).</p>
+        <p>On distingue :</p>
+        <ul>
+            <li><strong>Circuits combinatoires</strong> : sortie dépend uniquement des entrées</li>
+            <li><strong>Circuits séquentiels</strong> : sortie dépend aussi du temps et des états précédents</li>
+        </ul>
+    </section>
+
+    <section class="carte">
+        <h2>🔌 Portes logiques fondamentales</h2>
+        <ul>
+            <li><strong>NON (NOT)</strong> : inverse la valeur</li>
+            <li><strong>ET (AND)</strong> : vrai si les deux entrées sont vraies</li>
+            <li><strong>OU (OR)</strong> : vrai si au moins une entrée est vraie</li>
+            <li><strong>OU exclusif (XOR)</strong> : vrai si une seule entrée est vraie</li>
+        </ul>
+        <p>En combinant ces portes, on peut créer des circuits plus complexes comme
+        des <strong>additionneurs</strong>.</p>
+    </section>
+
+    <section class="carte">
+        <h2>➕ Additionneur binaire</h2>
+        <p>Un additionneur permet d’additionner des bits.</p>
+        <p>Il produit :</p>
+        <ul>
+            <li>une <strong>somme</strong> (S)</li>
+            <li>une <strong>retenue</strong> (Cout)</li>
+        </ul>
+        <p>Les additionneurs multi-bits sont construits à partir de plusieurs additionneurs 1 bit.</p>
+    </section>
+
+    <section class="carte">
+        <h2>💾 La mémoire vive (RAM)</h2>
+        <p>La RAM stocke <strong>les données et les programmes en cours d’exécution</strong>.</p>
+        <ul>
+            <li>Stockage sous forme de bits (0/1)</li>
+            <li>Organisation en <strong>octets</strong> (8 bits)</li>
+            <li>Chaque case mémoire possède une <strong>adresse</strong></li>
+        </ul>
+        <p>La RAM est une mémoire <strong>volatile</strong> : tout est perdu quand on éteint l’ordinateur.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🧠 Le processeur (CPU)</h2>
+        <p>Le processeur est le <strong>cerveau</strong> de l’ordinateur.</p>
+        <p>Il est composé de :</p>
+        <ul>
+            <li><strong>UAL</strong> : réalise les opérations arithmétiques et logiques</li>
+            <li><strong>Unité de contrôle</strong> : organise l’exécution des instructions</li>
+            <li><strong>Registres</strong> : stockage temporaire très rapide</li>
+        </ul>
+    </section>
+
+    <section class="carte">
+        <h2>🏗️ Architectures des ordinateurs</h2>
+        <p><strong>Architecture de Von Neumann</strong> :</p>
+        <ul>
+            <li>Même mémoire pour données et instructions</li>
+            <li>Très répandue dans les ordinateurs actuels</li>
+        </ul>
+        <p><strong>Architecture Harvard</strong> :</p>
+        <ul>
+            <li>Mémoire données et mémoire programme séparées</li>
+            <li>Plus rapide mais plus complexe</li>
+        </ul>
+    </section>
+
+    <section class="carte">
+        <h2>🔁 Cycle d’exécution d’un programme</h2>
+        <p>Le processeur fonctionne en boucle :</p>
+        <ol>
+            <li>Lire l’instruction en mémoire</li>
+            <li>La décoder</li>
+            <li>L’exécuter</li>
+            <li>Passer à la suivante</li>
+        </ol>
+        <p>Ce cycle est synchronisé par une <strong>horloge</strong> (GHz).</p>
+    </section>
+
+    <section class="carte">
+        <h2>🧾 Langage machine et assembleur</h2>
+        <p>Le processeur ne comprend que le <strong>binaire</strong>.</p>
+        <p>Le langage assembleur permet une écriture plus lisible :</p>
+        <ul>
+            <li><code>LDA</code> : charger une valeur</li>
+            <li><code>ADD</code> : additionner</li>
+            <li><code>STA</code> : stocker en mémoire</li>
+            <li><code>BRA / BRZ</code> : sauts</li>
+        </ul>
+        <p>Un programme Python est finalement traduit en instructions machine.</p>
+    </section>
+
+    <section class="carte">
+        <h2>🧪 Ce que montre le TP</h2>
+        <ul>
+            <li>Fonctionnement des opérateurs booléens (<code>and</code>, <code>or</code>, <code>not</code>)</li>
+            <li>Construction d’un XOR à partir de portes simples</li>
+            <li>Simulation d’un additionneur 1 bit</li>
+            <li>Lien direct entre logique électronique et Python</li>
+        </ul>
+    </section>
+
+    <section class="carte">
+        <h2>✅ À retenir absolument</h2>
+        <ul>
+            <li>Un ordinateur fonctionne uniquement avec 0 et 1</li>
+            <li>Les transistors sont à la base de tout</li>
+            <li>Les portes logiques permettent les calculs</li>
+            <li>La RAM est volatile</li>
+            <li>Le processeur exécute les instructions séquentiellement</li>
+        </ul>
+    </section>
+
+</main>
+
+<div class="retour">
+    <a href="nsi.html">⬅ Retour aux chapitres NSI</a>
+</div>
+
+</body>
+</html>

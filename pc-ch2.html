@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Physique-Chimie - Chapitre 2</title>
+<link rel="stylesheet" href="style.css">
+<style>
+main.matieres {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.carte {
+  width: 90%;
+  max-width: 900px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  background-color: transparent;
+}
+
+.carte h2 {
+  margin-bottom: 15px;
+  font-size: 1.6em;
+}
+
+.carte ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.formules li {
+  font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero page-matiere">
+  <h1>🧪 Chapitre 2 : Dosage par étalonnage</h1>
+</header>
+
+<main class="matieres">
+
+  <div class="carte">
+    <h2>Définition du dosage</h2>
+    <ul>
+      <li>Doser, c’est déterminer la <strong>concentration C</strong> d’une solution</li>
+      <li>On utilise un <strong>volume connu</strong> de solution</li>
+      <li>Le dosage permet de relier la concentration à une grandeur mesurable</li>
+    </ul>
+  </div>
+
+  <div class="carte">
+    <h2>Principe du dosage par étalonnage</h2>
+    <ul>
+      <li>On prépare des solutions étalons de concentrations connues</li>
+      <li>On mesure leur <strong>absorbance A</strong></li>
+      <li>On trace la courbe <strong>A = f(C)</strong></li>
+      <li>On mesure l’absorbance de la solution inconnue</li>
+      <li>On en déduit sa concentration</li>
+    </ul>
+  </div>
+
+  <div class="carte">
+    <h2>Loi de Beer-Lambert (À CONNAÎTRE)</h2>
+    <ul class="formules">
+      <li>A = ε × l × C</li>
+    </ul>
+    <ul>
+      <li>A : absorbance (sans unité)</li>
+      <li>ε : coefficient d’absorption molaire</li>
+      <li>l : largeur de la cuve</li>
+      <li>C : concentration</li>
+      <li><strong>Plus une solution est foncée, plus elle est concentrée</strong></li>
+    </ul>
+  </div>
+
+  <div class="carte">
+    <h2>Étapes du dosage par étalonnage</h2>
+    <ul>
+      <li>Mesurer le spectre d’absorption</li>
+      <li>Déterminer la longueur d’onde maximale λ<sub>max</sub></li>
+      <li>Choisir la couleur complémentaire</li>
+      <li>Mesurer l’absorbance des solutions étalons</li>
+      <li>Tracer la droite d’étalonnage</li>
+      <li>Déterminer la concentration inconnue</li>
+    </ul>
+  </div>
+
+  <div class="carte">
+    <h2>Spectre d’absorption et couleur</h2>
+    <ul>
+      <li>Le spectre permet de déterminer <strong>λ<sub>max</sub></strong></li>
+      <li>La solution absorbe une couleur</li>
+      <li>La couleur observée est la <strong>couleur complémentaire</strong></li>
+    </div>
+
+    <div class="carte">
+        <h2>Spectre d’absorption</h2>
+        <p>Le spectre permet de déterminer la longueur d’onde maximale λmax.</p>
+        <img src="Image/image.png" alt="Spectre d’absorption">
+    </div>
+
+</main>
+
+<div class="retour">
+  <a href="physique.html">⬅ Retour aux chapitres</a>
+</div>
+
+</body>
+</html>
